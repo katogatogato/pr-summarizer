@@ -1,0 +1,45 @@
+{
+  "name": "pr-summarizer",
+  "version": "1.0.0",
+  "description": "Auto-generate PR descriptions and review checklists from git diffs",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "pr-summarizer": "./bin/pr-summarizer"
+  },
+  "files": [
+    "dist/",
+    "bin/",
+    "action.yml"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "pr",
+    "pull-request",
+    "summarizer",
+    "github",
+    "cli",
+    "code-review"
+  ],
+  "author": "katogatogato",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/katogatogato/pr-summarizer"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}

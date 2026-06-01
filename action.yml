@@ -1,0 +1,17 @@
+name: 'PR Summarizer'
+description: 'Auto-generate PR descriptions and review checklists'
+inputs:
+  github-token:
+    description: 'GitHub token for API access'
+    required: true
+  base-branch:
+    description: 'Base branch to diff against'
+    required: false
+    default: 'main'
+  post-comment:
+    description: 'Post summary as PR comment'
+    required: false
+    default: 'true'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
